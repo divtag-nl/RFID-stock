@@ -1,0 +1,18 @@
+.button-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 60px);
+
+    .button {
+        margin: 10px 25px;
+        display: block;
+        width: 300px;
+        text-align: center;
+    }
+
+}
