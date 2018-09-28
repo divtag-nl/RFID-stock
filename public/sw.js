@@ -86,17 +86,15 @@ self.addEventListener('activate', function (e) {
 });
 
 self.addEventListener('fetch', function (e) {
-    console.log('[Service Worker] Fetching resource: ' + e.request.url);
-
     if (navigator.onLine) {
         e.respondWith(caches.match(e.request).then(function (r) {
-            console.log('[Service Worker] Fetching resource: ' + e.request.url);
 
             return fetch(e.request).then(function (response) {
                 return caches.open(cacheName).then(function (cache) {
-                    console.log('[Service Worker] Caching new resource: ' + e.request.url);
-
-                    cache.put(e.request, response.clone());
+                    if (e.request.method === 'GET' && e.request.url.indexOf('chrome-extension') !== 0) {
+                        console.log(e.request);
+                        cache.put(e.request, response.clone());
+                    }
 
                     return response;
                 });
@@ -104,8 +102,6 @@ self.addEventListener('fetch', function (e) {
         }));
     } else {
         e.respondWith(caches.match(e.request).then(function (r) {
-            console.log('[Service Worker] Fetching resource: ' + e.request.url);
-
             return r;
         }));
     }

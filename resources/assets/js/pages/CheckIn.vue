@@ -1,11 +1,28 @@
 <template>
-    <div class="form">
-        <br/><br/><br/>
-        <label>Naam product</label>
-        <input v-model="name">
-        <label>Tag product</label>
-        <input v-model="tag">
-        <button class="button">Save</button>
+    <div class="main-container">
+        <h1 class="align-center">Check in</h1>
+        <div class="form form--s margin-top">
+            <form>
+                <div class="form__row">
+                    <div class="text-field">
+                        <input id="productname" type="text" name="productname" class="text-field__input"
+                               placeholder="Enter name product" v-model="name"/>
+                        <label for="productname" class="text-field__label">Naam *</label>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="text-field">
+                        <input id="producttag" type="text" name="producttag" class="text-field__input"
+                               placeholder="Enter tag product" v-model="tag"/>
+                        <label for="producttag" class="text-field__label">Tag *</label>
+                    </div>
+                </div>
+                <div class="margin-top">
+                    <button type="submit" class="button" @click="save">Submit</button>
+                    <a href="#" class="button button--text">Cancel</a>
+                </div>
+            </form>
+        </div>
     </div>
 </template>
 
@@ -17,5 +34,13 @@
         tag: null
       }
     },
+
+    methods: {
+      save() {
+        
+      }
+    }
+
+
   }
 </script>
