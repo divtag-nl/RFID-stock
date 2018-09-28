@@ -4,9 +4,7 @@
     <header class="app-bar">
         <span class="app-bar__title">Tag Ventures</span>
     </header>
-    <div id="app">
-        <main class="main">
+    <main class="main">
 
-        </main>
-    </div>
+    </main>
 @endsection
