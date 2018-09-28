@@ -1,7 +1,7 @@
 <template>
     <div class="button-container">
         <a href="/checkin" class="button">Inchecken</a>
-        <a href="/stock" class="button">Voorraad scannen</a>
+        <router-link :to="{ name: 'scan-stock' }" class="button">Voorraad scannen</router-link>
         <a href="/locations" class="button">Locaties aanmaken</a>
     </div>
 </template>

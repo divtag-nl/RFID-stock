@@ -25,7 +25,6 @@ self.addEventListener('fetch', function (e) {
                 return fetch(e.request).then(function (response) {
                     return caches.open(cacheName).then(function (cache) {
                         if (e.request.method === 'GET' && e.request.url.indexOf('chrome-extension') !== 0) {
-                            console.log(e.request);
                             cache.put(e.request, response.clone());
                         }
 

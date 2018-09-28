@@ -16,8 +16,8 @@
             Echo.channel('tag')
                 .listen('TagScanned', (e) => {
                     console.log(e);
-                    this.tags.push(e.tags)
-                    this.tags = _.uniq(this.tags)
+
+                    this.tags = _.union(this.tags, e.tags);
                 });
         }
     }
