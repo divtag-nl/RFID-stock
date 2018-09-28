@@ -26,3 +26,5 @@ Route::get('/stock', function () {
 Route::get('/locations', function () {
     return view('locations');
 });
+
+Route::resource('product', 'ProductController');

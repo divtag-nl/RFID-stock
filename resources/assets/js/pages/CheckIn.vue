@@ -36,8 +36,12 @@
     },
 
     methods: {
-      save() {
-        
+      save(e) {
+        e.preventDefault();
+        axios.post('/product', {'name':this.name,'tag':this.tag})
+          .then((response) => {
+            console.log(response);
+          });
       }
     }
 
