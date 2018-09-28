@@ -1,7 +1,11 @@
 <template>
-    <ul>
-        <li v-for="tag in tags" v-text="tag"></li>
-    </ul>
+    <div class="main-container">
+        <div class="card">
+            <ul>
+                <li v-for="tag in tags" v-text="tag"></li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -15,9 +19,7 @@
         mounted () {
             Echo.channel('tag')
                 .listen('TagScanned', (e) => {
-                    console.log(e);
-                    this.tags.push(e.tags)
-                    this.tags = _.uniq(this.tags)
+                    this.tags = _.union(this.tags, e.tags);
                 });
         }
     }
