@@ -19250,3 +19250,31 @@ table .checkbox {
           align-items: center;
 }
 
+.button-container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 122px);
+}
+
+.button-container .button {
+  margin: 10px 25px;
+  display: block;
+  width: 300px;
+  text-align: center;
+}
+

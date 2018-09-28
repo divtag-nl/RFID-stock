@@ -10,8 +10,18 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
+    <header class="app-bar">
+        <span class="app-bar__title">Tag Ventures</span>
+    </header>
     <div id="app">
         <router-view></router-view>
+        <main class="main">
+            <div class="button-container">
+                <button class="button">Inchecken</button>
+                <button class="button">Voorraad scannen</button>
+                <button class="button">Locaties aanmaken</button>
+            </div>
+        </main>
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
