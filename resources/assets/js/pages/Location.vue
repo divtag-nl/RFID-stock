@@ -48,11 +48,14 @@
     mounted() {
       Echo.channel('tag')
         .listen('TagScanned', (e) => {
-          this.tags = _.union(this.tags, e.tags);
 
-          if(this.tag === null || this.tag.length < 1) {
-            this.tag = this.tags[0];
-          }
+          Object.keys(e.tags).forEach(tag => {
+            if(e.tags[tag].location === null) {
+              if(!this.tags.includes(tag)){
+                this.tag = tag;
+              }
+            }
+          });
         });
     },
 
