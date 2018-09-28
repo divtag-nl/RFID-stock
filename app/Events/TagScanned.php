@@ -14,19 +14,21 @@ class TagScanned implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $tags;
+
     /**
      * Create a new event instance.
      *
-     * @return void
+     * @param array $tags
      */
-    public function __construct()
+    public function __construct(array $tags)
     {
-        //
+        $this->tags = $tags;
     }
 
     public function broadcastWith()
     {
-        return ['tag' => 'example'];
+        return ['tags' => $this->tags];
     }
     /**
      * Get the channels the event should broadcast on.

@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+$this->middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/tags', 'TagsController@tagRequest');
+$this->post('/tags', 'TagsController@tagRequest');
