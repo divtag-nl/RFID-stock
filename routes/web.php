@@ -28,3 +28,4 @@ Route::get('/locations', function () {
 });
 
 Route::resource('product', 'ProductController');
+Route::resource('location', 'LocationController');
