@@ -2,11 +2,10 @@
 
 namespace App\Listeners;
 
-use App\Events\BroadcastTag;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class EventListener
+class HandleTagScanned
 {
     /**
      * Create the event listener.
@@ -21,10 +20,10 @@ class EventListener
     /**
      * Handle the event.
      *
-     * @param  BroadcastTag $event
+     * @param  object  $event
      * @return void
      */
-    public function handle(BroadcastTag $event)
+    public function handle($event)
     {
         //
     }

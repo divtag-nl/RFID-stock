@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>{{ config('app.name') }}</title>
+    <script src="//{{ Request::getHost() }}:6001/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
@@ -15,5 +16,11 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+      Echo.channel('tag')
+        .listen('TagScanned', (e) => {
+          console.log(e);
+        });
+    </script>
 </body>
 </html>

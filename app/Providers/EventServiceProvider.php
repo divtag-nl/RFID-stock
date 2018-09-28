@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\BroadcastTag' => [
-            'App\Listeners\EventListener',
+        'App\Events\TagScanned' => [
+            'App\Listeners\HandleTagScanned',
         ],
     ];
 
