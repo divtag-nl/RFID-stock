@@ -16,7 +16,3 @@ let router = new VueRouter({
 new Vue({
     router,
 }).$mount('#app');
-
-axios.get('/').then(() => {
-    console.log('test');
-});
