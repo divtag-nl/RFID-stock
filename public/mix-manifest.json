@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/js/sw.js": "/js/sw.js",
-    "/backend/js/bundle.js": "/backend/js/bundle.js"
+    "/js/app.js": "/js/app.js?id=321fdde0bb4ab4e5677b",
+    "/css/app.css": "/css/app.css?id=dc58c7b83f08a06efca4",
+    "/sw.js": "/sw.js?id=9d5d10b4312329428957",
+    "/backend/js/bundle.js": "/backend/js/bundle.js?id=01321d3de7acff292ebf"
 }
