@@ -1,7 +1,9 @@
 <template>
-    <ul>
-        <li v-for="tag in tags" v-text="tag"></li>
-    </ul>
+    <div class="main-container">
+        <ul>
+            <li v-for="tag in tags" v-text="tag"></li>
+        </ul>
+    </div>
 </template>
 
 <script>
