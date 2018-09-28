@@ -24,7 +24,7 @@ class RfidRequest extends FormRequest
     public function rules()
     {
         return [
-            'tags' => 'filled|array',
+            'tags' => 'required|filled|array',
         ];
     }
 }
