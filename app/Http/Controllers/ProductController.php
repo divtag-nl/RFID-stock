@@ -31,7 +31,9 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request, Product $product)
     {
-        return $product->on()->create($request->only($product->getFillable()));
+        $product->on()->create($request->only($product->getFillable()));
+
+        return response('OK',200);
     }
 
     /**

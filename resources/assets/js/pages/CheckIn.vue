@@ -3,11 +3,13 @@
         <h1 class="align-center">Check in</h1>
         <div class="form form--s margin-top">
             <form>
+                <h2>{{ saved }}</h2>
                 <div class="form__row">
                     <div class="text-field">
                         <input id="productname" type="text" name="productname" class="text-field__input"
                                placeholder="Enter name product" v-model="name"/>
                         <label for="productname" class="text-field__label">Naam *</label>
+                        <span class="field__error-text">{{ errors.name && errors.name[0] }}</span>
                     </div>
                 </div>
                 <div class="form__row">
@@ -15,6 +17,7 @@
                         <input id="producttag" type="text" name="producttag" class="text-field__input"
                                placeholder="Enter tag product" v-model="tag"/>
                         <label for="producttag" class="text-field__label">Tag *</label>
+                        <span class="field__error-text">{{ errors.tag && errors.tag[0] }}</span>
                     </div>
                 </div>
                 <div class="margin-top">
@@ -31,7 +34,12 @@
     data() {
       return {
         name: null,
-        tag: null
+        tag: null,
+        saved:null,
+        errors: {
+          name: null,
+          tag: null
+        }
       }
     },
 
@@ -40,7 +48,12 @@
         e.preventDefault();
         axios.post('/product', {'name':this.name,'tag':this.tag})
           .then((response) => {
-            console.log(response);
+            this.saved  = "Product saved!";
+            this.name = null;
+            this.tag = null;
+          })
+          .catch(error => {
+            this.errors = _.merge(this.errors, error.response.data.errors);
           });
       }
     }
