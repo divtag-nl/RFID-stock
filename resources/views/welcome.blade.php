@@ -14,7 +14,7 @@
         <span class="app-bar__title">Tag Ventures</span>
     </header>
     <div id="app">
-        <router-view></router-view>
+        <!--<router-view></router-view>-->
         <main class="main">
             <div class="button-container">
                 <button class="button">Inchecken</button>

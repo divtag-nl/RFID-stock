@@ -19268,7 +19268,7 @@ table .checkbox {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 122px);
+  min-height: calc(100vh - 60px);
 }
 
 .button-container .button {
@@ -19276,5 +19276,20 @@ table .checkbox {
   display: block;
   width: 300px;
   text-align: center;
+}
+
+.main {
+  background: url(/images/bg.jpg?ef88b486c226aa3fcf4d5b21e0a08dca) center center no-repeat/cover;
+  position: relative;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
