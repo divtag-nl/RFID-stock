@@ -3,6 +3,10 @@ import Vue from 'vue';
 import routes from './routes';
 import VueRouter from 'vue-router';
 
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js', { scope: '/' });
+};
+
 Vue.use(VueRouter);
 
 let router = new VueRouter({
@@ -12,3 +16,7 @@ let router = new VueRouter({
 new Vue({
     router,
 }).$mount('#app');
+
+axios.get('/').then(() => {
+    console.log('test');
+});
