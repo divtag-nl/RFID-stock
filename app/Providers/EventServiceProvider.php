@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Events\BroadcastTag;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -28,8 +27,6 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        //BroadcastTag::listen('event.name', function ($foo, $bar) {
-
-        //});
+        //
     }
 }
