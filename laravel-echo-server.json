@@ -19,8 +19,8 @@
 	"port": "6001",
 	"protocol": "https",
 	"socketio": {},
-	"sslCertPath": "/home/geoffrey/.valet/Certificates/tag-ventures.test.crt",
-	"sslKeyPath": "/home/geoffrey/.valet/Certificates/tag-ventures.test.key",
+	"sslCertPath": "/Users/luukhoeben/.valet/Certificates/rfid-stock.test.crt",
+	"sslKeyPath": "/Users/luukhoeben/.valet/Certificates/rfid-stock.test.key",
 	"sslCertChainPath": "",
 	"sslPassphrase": "",
 	"subscribers": {
