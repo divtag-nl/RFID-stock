@@ -28,8 +28,8 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        BroadcastTag::listen('event.name', function ($foo, $bar) {
+        //BroadcastTag::listen('event.name', function ($foo, $bar) {
 
-        });
+        //});
     }
 }
