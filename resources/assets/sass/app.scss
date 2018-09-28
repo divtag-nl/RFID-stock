@@ -5,11 +5,12 @@
 @import '~project-fast/src/assets/scss/includes.scss';
 
 // Components
-@import 'components/button-container';
+@import 'components/main-container';
 
 .main {
     background: url(../img/bg.jpg) no-repeat top center / cover;
     position: relative;
+    min-height: 100vh;
 
     &::before {
         content: '';
