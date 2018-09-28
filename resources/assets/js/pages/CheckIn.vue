@@ -31,8 +31,10 @@
 
 <script>
   export default {
+
     data() {
       return {
+        tags: [],
         name: null,
         tag: null,
         saved:null,
@@ -41,6 +43,17 @@
           tag: null
         }
       }
+    },
+
+    mounted() {
+      Echo.channel('tag')
+        .listen('TagScanned', (e) => {
+          this.tags = _.union(this.tags, e.tags);
+
+          if(this.tag === null || this.tag.length < 1) {
+            this.tag = this.tags[0];
+          }
+        });
     },
 
     methods: {
