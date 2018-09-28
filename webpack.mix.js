@@ -11,3 +11,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
         'node_modules/project-fast/src/assets/js/bundle.js',
         'node_modules/project-fast/src/assets/js/app.min.js'
     ], 'public/backend/js/bundle.js');
+
+mix.js('resources/assets/js/sw.js', 'public/js');
