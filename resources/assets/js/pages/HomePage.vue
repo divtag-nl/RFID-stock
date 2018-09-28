@@ -4,7 +4,12 @@
 
 <script>
     export default {
-
+        mounted () {
+            Echo.channel('tag')
+                .listen('TagScanned', (e) => {
+                    console.log(e);
+                });
+        }
     }
 </script>
 

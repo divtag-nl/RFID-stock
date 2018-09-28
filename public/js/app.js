@@ -31804,7 +31804,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        Echo.channel('tag').listen('TagScanned', function (e) {
+            console.log(e);
+        });
+    }
+});
 
 /***/ }),
 /* 46 */

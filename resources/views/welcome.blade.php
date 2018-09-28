@@ -16,11 +16,5 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
-    <script>
-      Echo.channel('tag')
-        .listen('TagScanned', (e) => {
-          console.log(e);
-        });
-    </script>
 </body>
 </html>
