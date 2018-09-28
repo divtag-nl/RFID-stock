@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class="#app">
+<div id="app">
     @yield('content')
 </div>
 
