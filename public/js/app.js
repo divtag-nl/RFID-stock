@@ -30867,6 +30867,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -30878,9 +30882,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Home!")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "button-container" }, [
+      _c("a", { staticClass: "button", attrs: { href: "/checkin" } }, [
+        _vm._v("Inchecken")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "button", attrs: { href: "/stock" } }, [
+        _vm._v("Voorraad scannen")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "button", attrs: { href: "/locations" } }, [
+        _vm._v("Locaties aanmaken")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
