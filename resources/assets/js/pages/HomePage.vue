@@ -1,8 +1,10 @@
 <template>
-    <div class="button-container">
-        <a href="/checkin" class="button">Inchecken</a>
-        <a href="/stock" class="button">Voorraad scannen</a>
-        <a href="/locations" class="button">Locaties aanmaken</a>
+    <div class="main-container">
+        <div class="buttongroup">
+            <a href="/checkin" class="button">Inchecken</a>
+            <a href="/stock" class="button">Voorraad scannen</a>
+            <a href="/locations" class="button">Locaties aanmaken</a>
+        </div>
     </div>
 </template>
 
