@@ -9,6 +9,7 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Support\Collection;
 
 class TagScanned implements ShouldBroadcast
 {
@@ -19,9 +20,9 @@ class TagScanned implements ShouldBroadcast
     /**
      * Create a new event instance.
      *
-     * @param array $tags
+     * @param Collection $tags
      */
-    public function __construct(array $tags)
+    public function __construct(Collection $tags)
     {
         $this->tags = $tags;
     }

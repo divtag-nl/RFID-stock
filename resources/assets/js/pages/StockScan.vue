@@ -22,6 +22,7 @@
         mounted () {
             Echo.channel('tag')
                 .listen('TagScanned', (e) => {
+                    console.log(e);
                     this.tags = _.union(this.tags, e.tags);
                 });
         }
