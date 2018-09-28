@@ -19279,7 +19279,7 @@ table .checkbox {
 }
 
 .main {
-  background: url(/images/bg.jpg?ef88b486c226aa3fcf4d5b21e0a08dca) center center no-repeat/cover;
+  background: url(/images/bg.jpg?d1badae340df6d36d66c913b77228cd4) no-repeat top center/cover;
   position: relative;
 }
 
@@ -19290,6 +19290,6 @@ table .checkbox {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 

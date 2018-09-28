@@ -8,7 +8,7 @@
 @import 'components/button-container';
 
 .main {
-    background: url(../img/bg.jpg) center center no-repeat / cover;
+    background: url(../img/bg.jpg) no-repeat top center / cover;
     position: relative;
 
     &::before {
@@ -18,6 +18,6 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba($color-base-white,.4);
+        background-color: rgba($color-base-white,.3);
     }
 }
