@@ -10,6 +10,7 @@
 .main {
     background: url(../img/bg.jpg) no-repeat top center / cover;
     position: relative;
+    min-height: 100vh;
 
     &::before {
         content: '';
