@@ -2,6 +2,7 @@
 
 namespace App\Transformers;
 
+use Illuminate\Http\Request;
 use League\Fractal\TransformerAbstract;
 
 class TagTransformer extends TransformerAbstract
@@ -11,10 +12,11 @@ class TagTransformer extends TransformerAbstract
      *
      * @return array
      */
-    public function transform()
+    public function transform(Request $request)
     {
-        return [
-            //
+        return[
+            'message' => 'Scan gewoon !',
+            'tags' => count($request->tags),
         ];
     }
 }
