@@ -1,9 +1,12 @@
 <template>
     <div class="main-container">
         <div class="card">
-            <ul>
-                <li v-for="tag in tags" v-text="tag"></li>
-            </ul>
+            <div class="card__content">
+                <h1>Producten scannen</h1>
+                <ul>
+                    <li v-for="tag in tags" v-text="tag"></li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
